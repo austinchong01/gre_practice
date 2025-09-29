@@ -70,17 +70,3 @@ CREATE TABLE earnings (
     
     created_at TIMESTAMP DEFAULT NOW()
 );
-
--- -- Search and discovery optimization
--- CREATE INDEX idx_creators_categories ON creators USING GIN(categories);
--- CREATE INDEX idx_creators_follower_count ON creators(follower_count DESC);
--- CREATE INDEX idx_creators_engagement_rate ON creators(engagement_rate DESC);
--- CREATE INDEX idx_creators_available ON creators(is_available) WHERE is_available = true;
-
--- -- Collaboration queries
--- CREATE INDEX idx_collaborations_brand_status ON collaborations(brand_id, status);
--- CREATE INDEX idx_collaborations_creator_status ON collaborations(creator_id, status);
--- CREATE INDEX idx_collaborations_sent_at ON collaborations(sent_at DESC);
-
--- -- Earnings queries
--- CREATE INDEX idx_earnings_creator_date ON earnings(creator_id, created_at DESC);
