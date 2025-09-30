@@ -8,9 +8,7 @@ GET
     campaign
         creators
         sales
-        engagement
     platform_creator performance of campaign
-    
 
 POST
     brand
@@ -33,4 +31,3 @@ DELETE
 */
 
 const express = require("express");
-const 

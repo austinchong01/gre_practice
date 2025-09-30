@@ -29,8 +29,8 @@ CREATE TABLE campaigns (
 
 CREATE TABLE campaign_creators (
     id SERIAL PRIMARY KEY,
-    campaign_id INTEGER REFERENCES campaigns(id) on DELETE CASCADE,
+    INTEGER REFERENCES campaigns(id) on DELETE CASCADE,
     creator_platform_id INTEGER REFERENCES creator_platform(id) ON DELETE CASCADE,
     revenue DECIMAL (10,2),
     UNIQUE(campaign_id, creator_platform_id) -- one creator platform per campaign?
-)
+);
